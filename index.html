@@ -16,17 +16,32 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="css/custom.css" />
   </head>
   <body>
     <header class="top-bar py-2 text-white">
-      <div class="container d-flex justify-content-end align-items-center gap-3">
-        <span class="small text-uppercase">Castellano</span>
-        <a href="#reservar" class="btn btn-outline-light btn-sm px-3">Reserva</a>
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+      >
+        <div class="d-flex align-items-center gap-2 small">
+          <i class="bi bi-geo-alt"></i>
+          <span>Plaza San Agustín, 1 · Logroño</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a class="contact-link" href="tel:+34941123456">+34 941 123 456</a>
+          <a class="contact-link" href="mailto:hola@aureapalacio.com"
+            >hola@aureapalacio.com</a
+          >
+          <span class="small text-uppercase">Castellano</span>
+        </div>
       </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container py-2">
         <a class="navbar-brand fw-bold text-uppercase" href="#">Aurea Palacio</a>
         <button
@@ -52,17 +67,42 @@
       </div>
     </nav>
 
-    <section class="hero text-white text-center d-flex align-items-center">
+    <section class="hero text-white d-flex align-items-center">
       <div class="container">
-        <p class="text-uppercase tracking mb-2">Hotel boutique 5* · Logroño</p>
-        <h1 class="display-4 fw-semibold mb-4">
-          El lujo clásico en el corazón del casco histórico
-        </h1>
-        <a href="#reservar" class="btn btn-gold px-5 py-3">Reservar ahora</a>
+        <div class="row justify-content-center justify-content-lg-start">
+          <div class="col-lg-7">
+            <p class="hero-subtitle mb-3">Hotel boutique 5* · Logroño</p>
+            <h1 class="display-4 fw-semibold mb-4">
+              El lujo clásico en el corazón del casco histórico
+            </h1>
+            <div class="gold-divider mb-4"></div>
+            <p class="lead text-white-75 mb-4">
+              El antiguo Palacio de Correos renace como santuario de elegancia
+              atemporal, con interiores cálidos, arte postal y servicio
+              personalizado.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <a href="#reservar" class="btn btn-gold px-5 py-3">Reservar ahora</a>
+              <a href="#hotel" class="btn btn-outline-gold px-5 py-3"
+                >Conocer el hotel</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-4 mt-5 mt-lg-0">
+            <div class="hero-card shadow-lg">
+              <p class="small text-uppercase tracking mb-1">Detalles que inspiran</p>
+              <h2 class="h4 mb-3">Colección privada de filatelia</h2>
+              <p class="mb-0 text-white-75">
+                Descubre piezas únicas que narran la historia de la correspondencia
+                española, cuidadosamente expuestas en el lobby del hotel.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="hotel" class="py-5">
+    <section id="hotel" class="py-5 section">
       <div class="container">
         <div class="row g-4 align-items-center">
           <div class="col-lg-6">
@@ -74,7 +114,9 @@
           </div>
           <div class="col-lg-6">
             <span class="section-eyebrow">Bienvenidos</span>
-            <h2 class="display-6 fw-semibold mb-3">Un edificio histórico con alma contemporánea</h2>
+            <h2 class="display-6 fw-semibold mb-3 section-title">
+              Un edificio histórico con alma contemporánea
+            </h2>
             <p class="lead text-muted">
               Aurea Palacio de Correos revive el esplendor del antiguo edificio de
               correos de Logroño. Tras una cuidada rehabilitación, conserva sus
@@ -96,12 +138,14 @@
       </div>
     </section>
 
-    <section id="habitaciones" class="py-5 bg-light">
+    <section id="habitaciones" class="py-5 section section-alt">
       <div class="container">
         <div class="row align-items-center mb-5">
           <div class="col-lg-6">
             <span class="section-eyebrow">Habitaciones</span>
-            <h2 class="display-6 fw-semibold">Descanso con un toque art déco</h2>
+            <h2 class="display-6 fw-semibold section-title">
+              Descanso con un toque art déco
+            </h2>
           </div>
           <div class="col-lg-6">
             <p class="text-muted">
@@ -113,7 +157,7 @@
         </div>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
+            <div class="card border-0 h-100 room-card">
               <img
                 src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80"
                 class="card-img-top"
@@ -128,7 +172,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
+            <div class="card border-0 h-100 room-card">
               <img
                 src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80"
                 class="card-img-top"
@@ -143,7 +187,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
+            <div class="card border-0 h-100 room-card">
               <img
                 src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80"
                 class="card-img-top"
@@ -161,12 +205,14 @@
       </div>
     </section>
 
-    <section id="servicios" class="py-5">
+    <section id="servicios" class="py-5 section">
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-4">
             <span class="section-eyebrow">Servicios</span>
-            <h2 class="display-6 fw-semibold">Experiencias singulares</h2>
+            <h2 class="display-6 fw-semibold section-title">
+              Experiencias singulares
+            </h2>
             <p class="text-muted">
               Gastronomía riojana, spa urbano y espacios para eventos privados
               conviven en un mismo palacio para sorprender a cada huésped.
@@ -215,7 +261,54 @@
       </div>
     </section>
 
-    <section id="experiencias" class="py-5 bg-light">
+    <section class="py-5 signature-section section-alt">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5">
+            <span class="section-eyebrow">La firma Aurea</span>
+            <h2 class="display-6 fw-semibold section-title">
+              Elegancia atemporal en cada detalle
+            </h2>
+            <p class="text-muted mb-4">
+              Nuestro equipo de conserjería diseña experiencias a medida, desde
+              catas privadas hasta itinerarios culturales exclusivos, para que tu
+              estancia sea tan memorable como los sellos que atesoramos.
+            </p>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-start gap-3">
+                <span class="badge rounded-pill text-bg-light text-uppercase">Atelier de aromas</span>
+                <p class="mb-0 text-muted">
+                  Fragancias creadas en exclusiva para el hotel con notas de cuero,
+                  ámbar y bergamota.
+                </p>
+              </div>
+              <div class="d-flex align-items-start gap-3">
+                <span class="badge rounded-pill text-bg-light text-uppercase">Mayordomía 24h</span>
+                <p class="mb-0 text-muted">
+                  Servicio discreto y personalizado para satisfacer cualquier
+                  petición.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="quote-card shadow-lg">
+              <blockquote class="blockquote mb-0">
+                <p>
+                  “Un refugio que abraza el refinamiento clásico y lo combina con la
+                  calidez riojana. Cada estancia es un viaje sensorial.”
+                </p>
+                <footer class="blockquote-footer text-white-75 mt-3">
+                  <span class="fw-semibold text-white">Revista Viajeros Premium</span>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencias" class="py-5 section section-alt">
       <div class="container">
         <div class="row g-4 align-items-center">
           <div class="col-lg-6 order-lg-2">
@@ -227,7 +320,9 @@
           </div>
           <div class="col-lg-6">
             <span class="section-eyebrow">Experiencias</span>
-            <h2 class="display-6 fw-semibold">Descubre La Rioja a través de los sentidos</h2>
+            <h2 class="display-6 fw-semibold section-title">
+              Descubre La Rioja a través de los sentidos
+            </h2>
             <ul class="list-unstyled text-muted lead">
               <li class="mb-2">• Ruta enológica exclusiva por bodegas centenarias.</li>
               <li class="mb-2">• Visitas guiadas al casco histórico y museos locales.</li>
@@ -240,7 +335,7 @@
       </div>
     </section>
 
-    <section id="reservar" class="reservation py-5 text-white">
+    <section id="reservar" class="reservation py-5 text-white section">
       <div class="container">
         <div class="row g-4 align-items-center">
           <div class="col-lg-5">
@@ -283,7 +378,7 @@
       </div>
     </section>
 
-    <footer id="contacto" class="py-5 bg-dark text-white">
+    <footer id="contacto" class="py-5 text-white footer">
       <div class="container">
         <div class="row g-4">
           <div class="col-md-4">
