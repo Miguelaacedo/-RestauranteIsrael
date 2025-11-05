@@ -1,0 +1,365 @@
+:root {
+  --primary-gold: #b08a3b;
+  --deep-brown: #2c1c12;
+  --warm-gray: #f4f1ed;
+  --antique-paper: #f9f4ec;
+  --text-body: #3d3d3d;
+  --body-font: 'Source Sans 3', sans-serif;
+  --heading-font: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-body);
+  background-color: var(--antique-paper);
+  line-height: 1.7;
+}
+
+h1,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  letter-spacing: 0.02em;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+.top-bar {
+  background: var(--deep-brown);
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+.top-bar .contact-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.top-bar .contact-link:hover {
+  color: #fff;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(176, 138, 59, 0.15);
+}
+
+.navbar-brand {
+  font-family: var(--heading-font);
+  letter-spacing: 0.35em;
+  font-size: 1.1rem;
+  color: var(--deep-brown) !important;
+}
+
+.navbar-brand:hover {
+  color: var(--primary-gold) !important;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  color: #5a5a5a !important;
+  padding: 0.75rem 0.5rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.2rem;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1400&q=80')
+    center/cover;
+  min-height: 80vh;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(44, 28, 18, 0.8), rgba(44, 28, 18, 0.55));
+}
+
+.hero .container,
+.hero .row,
+.hero .col-lg-7,
+.hero .col-lg-4 {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.gold-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.tracking {
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+}
+
+.btn-gold {
+  background-color: var(--primary-gold);
+  border-color: var(--primary-gold);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-radius: 999px;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+  background-color: #9a7631;
+  border-color: #9a7631;
+  color: #fff;
+}
+
+.btn-outline-gold {
+  border-color: var(--primary-gold);
+  color: var(--primary-gold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.btn-outline-gold:hover,
+.btn-outline-gold:focus {
+  background-color: var(--primary-gold);
+  color: #fff;
+}
+
+.section {
+  position: relative;
+  background-color: #fff;
+}
+
+.section-alt {
+  background-color: var(--warm-gray);
+}
+
+.section + .section {
+  border-top: 1px solid rgba(176, 138, 59, 0.1);
+}
+
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  color: var(--primary-gold);
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-gold), transparent);
+}
+
+.section-alt .section-title::after {
+  background: linear-gradient(90deg, transparent, var(--primary-gold));
+}
+
+.link-gold {
+  color: var(--primary-gold);
+  text-decoration-thickness: 2px;
+}
+
+.link-gold:hover {
+  color: #9a7631;
+}
+
+.room-card {
+  border-radius: 24px;
+  box-shadow: 0 1.5rem 3rem rgba(31, 24, 19, 0.08);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.room-card img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2rem 3.5rem rgba(31, 24, 19, 0.12);
+}
+
+.feature-card {
+  border: 1px solid rgba(176, 138, 59, 0.25);
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.25rem 2.5rem rgba(31, 24, 19, 0.12);
+}
+
+.signature-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.signature-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(176, 138, 59, 0.15), transparent 55%);
+  pointer-events: none;
+}
+
+.signature-section .badge {
+  letter-spacing: 0.15em;
+  font-size: 0.65rem;
+}
+
+.quote-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(63, 44, 29, 0.95), rgba(44, 28, 18, 0.9));
+  color: #fff;
+}
+
+.quote-card::before {
+  content: '“';
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 5rem;
+  font-family: var(--heading-font);
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.quote-card p {
+  font-size: 1.1rem;
+}
+
+.reservation {
+  background: linear-gradient(rgba(63, 44, 29, 0.85), rgba(63, 44, 29, 0.85)),
+    url('https://images.unsplash.com/photo-1461717358164-16018238e812?auto=format&fit=crop&w=1400&q=80')
+      center/cover;
+  border-radius: 32px;
+  margin: 0 1rem;
+  padding: 4rem 0;
+}
+
+.reservation .form-control,
+.reservation .form-select {
+  border-radius: 999px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+}
+
+.reservation .form-control:focus,
+.reservation .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(176, 138, 59, 0.4);
+}
+
+.footer {
+  background: #1c120b;
+  border-top: 1px solid rgba(176, 138, 59, 0.25);
+}
+
+.footer h3,
+.footer h4 {
+  letter-spacing: 0.18em;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--primary-gold);
+}
+
+@media (max-width: 992px) {
+  .navbar-brand {
+    letter-spacing: 0.25em;
+  }
+
+  .section-title::after,
+  .section-alt .section-title::after {
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 5rem 0;
+  }
+
+  .hero-card {
+    padding: 2rem;
+  }
+
+  .reservation {
+    border-radius: 24px;
+    margin: 0;
+  }
+}
