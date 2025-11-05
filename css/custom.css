@@ -1,0 +1,144 @@
+:root {
+  --primary-gold: #b08a3b;
+  --deep-brown: #3f2c1d;
+  --warm-gray: #f4f1ed;
+  --body-font: 'Source Sans 3', sans-serif;
+  --heading-font: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--body-font);
+  color: #3d3d3d;
+  background-color: #ffffff;
+}
+
+h1,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+.top-bar {
+  background: var(--deep-brown);
+  letter-spacing: 0.1em;
+}
+
+.navbar-brand {
+  font-family: var(--heading-font);
+  letter-spacing: 0.2em;
+  color: var(--deep-brown) !important;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: #5a5a5a !important;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--primary-gold) !important;
+}
+
+.hero {
+  background: linear-gradient(rgba(34, 24, 18, 0.7), rgba(34, 24, 18, 0.7)),
+    url('https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1400&q=80')
+      center/cover;
+  min-height: 70vh;
+  padding: 6rem 0;
+}
+
+.tracking {
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+}
+
+.btn-gold {
+  background-color: var(--primary-gold);
+  border-color: var(--primary-gold);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+  background-color: #9a7631;
+  border-color: #9a7631;
+  color: #fff;
+}
+
+.btn-outline-gold {
+  border-color: var(--primary-gold);
+  color: var(--primary-gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.btn-outline-gold:hover,
+.btn-outline-gold:focus {
+  background-color: var(--primary-gold);
+  color: #fff;
+}
+
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  color: var(--primary-gold);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.link-gold {
+  color: var(--primary-gold);
+  text-decoration-thickness: 2px;
+}
+
+.link-gold:hover {
+  color: #9a7631;
+}
+
+.feature-card {
+  border: 1px solid rgba(176, 138, 59, 0.2);
+  border-radius: 20px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.25rem 2.5rem rgba(31, 24, 19, 0.12);
+}
+
+.reservation {
+  background: linear-gradient(rgba(63, 44, 29, 0.8), rgba(63, 44, 29, 0.8)),
+    url('https://images.unsplash.com/photo-1461717358164-16018238e812?auto=format&fit=crop&w=1400&q=80')
+      center/cover;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--primary-gold);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding: 4rem 0;
+  }
+}
