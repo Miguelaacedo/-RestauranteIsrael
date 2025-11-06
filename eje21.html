@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 21</title>
+</head>
+<body>
+<script>
+function Persona(nombre, apellido, edad, genero, intereses) {
+  this.nombre = {
+    primero: nombre,
+    ultimo: apellido
+  }
+  this.edad = edad
+  this.genero = genero
+  this.intereses = intereses
+  this.biografia = function() {
+    let texto = this.nombre.primero + ' ' + this.nombre.ultimo + ' tiene ' + this.edad + ' años. '
+    let pronombre
+
+    if (this.genero === 'hombre' || this.genero === 'm') {
+      pronombre = 'Le gusta '
+    } else if (this.genero === 'mujer' || this.genero === 'f') {
+      pronombre = 'Le gusta '
+    } else {
+      pronombre = 'Le gusta '
+    }
+
+    texto += pronombre
+
+    if (this.intereses.length === 1) {
+      texto += this.intereses[0] + '.'
+    } else if (this.intereses.length === 2) {
+      texto += this.intereses[0] + ' y ' + this.intereses[1] + '.'
+    } else {
+      for (let i = 0; i < this.intereses.length; i++) {
+        if (i === this.intereses.length - 1) {
+          texto += 'y ' + this.intereses[i] + '.'
+        } else {
+          texto += this.intereses[i] + ', '
+        }
+      }
+    }
+
+    return texto
+  }
+}
+
+let persona1 = new Persona('Ana', 'López', 22, 'mujer', ['bailar', 'leer', 'pintar'])
+</script>
+</body>
+</html>

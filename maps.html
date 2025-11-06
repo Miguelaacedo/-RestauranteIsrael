@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pruebas</title>
+  </head>
+  <body>
+    <script>
+      let sonido = new Map();
+      sonido.set("perro", "guau");
+      sonido.set("gato", "miau");
+      sonido.set("elefante", "toot");
+
+      sonido.size; // 3
+      sonido.get("perro");
+      sonido.get("zorro");
+      sonido.has("pájaro");
+      sonido.delete("perro");
+      sonido.has("perro");
+      for (let [clave, valor] of sonido) {
+        console.log(clave + " hace " + valor);
+      }
+
+      sonido.clear();
+      sonido.size;
+
+      let pepe = new Set();
+      pepe.add(1);
+      pepe.add(2);
+      pepe.add(3);
+      pepe.add(1);
+      pepe.add(21);
+      pepe.add("algún texto");
+      pepe.add("foo");
+
+      pepe.has(1);
+      pepe.delete("foo");
+      pepe.size;
+
+      for (let item of pepe) console.log(item);
+
+      let francis = new Set(["naranjas", "manzanas", "plátanos"]);
+
+      francis.forEach((valor, valorOtraVez, set) => {
+        alert(valor);
+      });
+    </script>
+  </body>
+</html>

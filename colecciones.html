@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleccioones</title>
+</head>
+<body>
+    <script>
+
+function unique(arr) {
+  return Array.from(new Set(arr));
+}
+
+let nombres = ["Ana", "Luis", "Ana", "Pedro", "Luis"];
+console.log(unique(nombres));
+
+
+function aclean(arr) {
+  let map = new Map();
+  for (let palabra of arr) {
+    let orden = palabra.toLowerCase().split("").sort().join("");
+    map.set(orden, palabra);
+  }
+  return Array.from(map.values());
+}
+
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+console.log(aclean(arr));
+
+
+let map = new Map();
+map.set("name", "John");
+let keys = Array.from(map.keys());
+keys.push("more");
+console.log(keys);
+
+    </script>
+</body>
+</html>

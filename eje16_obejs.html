@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 21</title>
+  </head>
+
+  <body>
+    <p id="prueba"></p>
+    <script>
+      function Persona(nombre, apellido, edad, genero, intereses) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.genero = genero;
+        this.intereses = intereses;
+      }
+
+      Persona.prototype.nacionalidad = "Española";
+
+      Persona.prototype.biografia = function () {
+        let texto =
+          this.nombre + " " + this.apellido + " tiene " + this.edad + " años. ";
+        texto += "Le gusta ";
+
+        if (this.intereses.length === 1) {
+          texto += this.intereses[0] + ".";
+        } else if (this.intereses.length === 2) {
+          texto += this.intereses[0] + " y " + this.intereses[1] + ".";
+        } else {
+          for (let i = 0; i < this.intereses.length; i++) {
+            if (i === this.intereses.length - 1) {
+              texto += "y " + this.intereses[i] + ".";
+            } else {
+              texto += this.intereses[i] + ", ";
+            }
+          }
+        }
+        return texto;
+      };
+
+      Persona.prototype.cambiarNombre = function () {
+        this.nombre = prompt("Introduce un nuevo nombre:");
+        return this.nombre + " " + this.apellido;
+      };
+
+      let persona1 = new Persona("Laura", "García", 25, "mujer", [
+        "leer",
+        "viajar",
+        "dibujar",
+      ]);
+
+      document.getElementById("prueba").innerHTML =
+        persona1.biografia() + "<br>(" + persona1.nacionalidad + ")";
+    </script>
+  </body>
+</html>
